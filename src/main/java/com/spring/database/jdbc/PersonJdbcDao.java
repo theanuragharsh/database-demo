@@ -23,4 +23,10 @@ public class PersonJdbcDao {
                 new BeanPropertyRowMapper<>(Person.class),
                 id);
     }
+
+    public Person findByName(String name) {
+        return jdbcTemplate.queryForObject("SELECT * FROM person where name = ?",
+                new BeanPropertyRowMapper<>(Person.class),
+                name);
+    }
 }

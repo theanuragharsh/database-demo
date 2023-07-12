@@ -25,5 +25,8 @@ public class DatabaseDemoApplication implements CommandLineRunner {
         log.info(personJdbcDao.getAll().toString());
 
         log.info(personJdbcDao.findById(10001L).toString());
+
+        log.info(personJdbcDao.findByName("Ranga").toString());
+
     }
 }
