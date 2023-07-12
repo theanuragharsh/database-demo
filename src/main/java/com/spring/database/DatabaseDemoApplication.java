@@ -23,5 +23,7 @@ public class DatabaseDemoApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         log.info(personJdbcDao.getAll().toString());
+
+        log.info(personJdbcDao.findById(10001L).toString());
     }
 }
